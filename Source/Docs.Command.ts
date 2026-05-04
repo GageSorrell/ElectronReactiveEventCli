@@ -12,5 +12,5 @@ import open from "open";
 export async function DocsCommand(): Promise<void>
 {
     SetCommand("docs");
-    open("https://electron-reactive-event.sorrell.sh/1.0.0/cli/introduction");
+    open("https://reactive-event.sorrell.sh/1.0.0/cli/introduction");
 }

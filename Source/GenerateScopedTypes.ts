@@ -15,10 +15,10 @@ import { writeFile } from "node:fs/promises";
 
 /**
  * Generate a module in the developer's project (in the `process.cwd()`) containing
- * a type for every type exported by `electron-reactive-event`, such that the `PackageKey`
+ * a type for every type exported by `reactive-event`, such that the `PackageKey`
  * type parameter is set for the developer's project's `PackageKey`.
  *
- * @example `npm exec electron-reactive-event generate-types MyPackageKey`
+ * @example `npm exec reactive-event generate-types MyPackageKey`
  */
 export async function GenerateScopedTypesInner(): Promise<void>
 {
@@ -37,7 +37,7 @@ export async function GenerateScopedTypesInner(): Promise<void>
         console.error(
             "A PackageKey argument was not provided.  The name of your project's PackageKey " +
             "should be provided as the last argument.  For example,\n\n" +
-            "    npm exec electron-reactive-event generate-types MyPackageKey"
+            "    npm exec reactive-event generate-types MyPackageKey"
         );
 
         process.exit(1);
@@ -207,7 +207,7 @@ export async function GenerateScopedTypesInner(): Promise<void>
                 return `    ${ Name } as ${ Name }Imported`;
             })
             .join(",\n") +
-        "\n} from \"electron-reactive-event\";\n"
+        "\n} from \"reactive-event\";\n"
     );
 
     const ImportedNamespaces: Array<string> =
@@ -226,17 +226,17 @@ export async function GenerateScopedTypesInner(): Promise<void>
                 return `    ${ Namespace } as ${ Namespace }Imported`;
             })
             .join(",\n") +
-        "\n} from \"electron-reactive-event\";\n"
+        "\n} from \"reactive-event\";\n"
     );
 
     const ImportErrorFunction: string =
         "import { ReactiveEventError as ReactiveEventErrorImported } from " +
-        "\"electron-reactive-event/scoped\";";
+        "\"reactive-event/scoped\";";
 
     const PackageKeyDefinition: string = `export type PackageKey = "${ PackageKey }";\n`;
 
     // eslint-disable-next-line @stylistic/max-len
-    // const PackageKeyDeclareModule: string = `declare module "electron-reactive-event/registrar"\n{\n    interface Registrar\n    {\n        ${ PackageKey }: { };\n    }\n};\n`;
+    // const PackageKeyDeclareModule: string = `declare module "reactive-event/registrar"\n{\n    interface Registrar\n    {\n        ${ PackageKey }: { };\n    }\n};\n`;
 
     // type EntryType = [ string, string | symbol ];
     // const ExportStatements: string =
@@ -252,7 +252,7 @@ export async function GenerateScopedTypesInner(): Promise<void>
     //         .filter(([ _Key, Value ]: [ string, string ]) => typeof Value !== "string")
     //         .map(([ Key ]: [ string, string | symbol ]) => `    ${ Key }`)
     //         .join(",\n") +
-    //     "\n} from \"electron-reactive-event/scoped\";\n";
+    //     "\n} from \"reactive-event/scoped\";\n";
 
     const BeginChannelLine: string = "export namespace Channel\n{\n";
     const EndChannelLine: string = "};\n";

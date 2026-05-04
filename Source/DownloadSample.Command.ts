@@ -42,7 +42,7 @@ export async function DownloadSampleCommand(): Promise<void>
             {
                 task: async (Context: Context, Task: Wrapper): Promise<void> =>
                 {
-                    const SampleDirectoryName: string = "electron-reactive-event-sample";
+                    const SampleDirectoryName: string = "reactive-event-sample";
                     Context.DownloadPath = "./" + SampleDirectoryName;
 
                     DownloadPath = Context.DownloadPath;
@@ -58,7 +58,7 @@ export async function DownloadSampleCommand(): Promise<void>
             {
                 task: async (Context: Context, Task: Wrapper): Promise<void> =>
                 {
-                    Context.TempPath = resolve(tmpdir(), "electron-reactive-event-cli");
+                    Context.TempPath = resolve(tmpdir(), "reactive-event-cli");
                     await mkdir(Context.TempPath);
                     Task.title = "Created temp directory to download and process the sample project.";
                 },

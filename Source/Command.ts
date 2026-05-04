@@ -21,14 +21,14 @@ export function GetHeader(FileName: string, PrincipalCommand: string): string
 {
     return `/**
  * File:   ${ FileName }
- * Author: \`electron-reactive-event-cli\`
+ * Author: \`reactive-event-cli\`
  *
  * ********************************************
  *
  * Generated with the ${ GetCommand() } command.
  * Regenerate this file by running,
  *
- *    \`npm exec electron-reactive-event ${ PrincipalCommand }\`
+ *    \`npm exec reactive-event ${ PrincipalCommand }\`
  *
  * in this directory.
  *

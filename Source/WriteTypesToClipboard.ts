@@ -171,7 +171,7 @@ function GetExportedTypeDeclaration(
 
 // function GetOutput(): string
 // {
-//     const Types: TypesRecord = GetExportedTypeNamesWithTypeParameterVectors(resolve("..", "ElectronReactiveEvent", "Source", "index.Scoped.ts"));
+//     const Types: TypesRecord = GetExportedTypeNamesWithTypeParameterVectors(resolve("..", "ReactiveEvent", "Source", "index.Scoped.ts"));
 //     Out.push(...Types.Scoped.map((Type: string): string =>
 //     {
 //         Type = Type.replaceAll(";", "");
@@ -222,7 +222,7 @@ function GetExportedTypeDeclaration(
 
 // const Out: string = GetOutput();
 
-clipboard.writeSync(JSON.stringify(GetExportedTypeNamesWithTypeParameterVectors(resolve("..", "ElectronReactiveEvent", "Source", "index.Scoped.ts")), null, 4));
+clipboard.writeSync(JSON.stringify(GetExportedTypeNamesWithTypeParameterVectors(resolve("..", "ReactiveEvent", "Source", "index.Scoped.ts")), null, 4));
 console.log("Wrote to the clipboard!");
 
 // const OutOld: Array<string> = Types.map((Type: string): string =>

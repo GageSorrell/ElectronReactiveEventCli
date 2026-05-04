@@ -26,7 +26,7 @@ export async function GenerateScopedTypes(): Promise<void>
     if (!(await HasConfig()))
     {
         /* eslint-disable-next-line @stylistic/max-len */
-        console.log("\n💡 Tip: You can create a default config file by running\n\n    npm exec electron-reactive-event setup\n");
+        console.log("\n💡 Tip: You can create a default config file by running\n\n    npm exec reactive-event setup\n");
     }
 
     const DefaultLabelScopedModulePath: string =
@@ -37,7 +37,7 @@ export async function GenerateScopedTypes(): Promise<void>
     if (!(await HasConfig()))
     {
         /* eslint-disable-next-line @stylistic/max-len */
-        console.log("\n💡 Tip: You can create a default config file by running\n\n    npm exec electron-reactive-event setup\n");
+        console.log("\n💡 Tip: You can create a default config file by running\n\n    npm exec reactive-event setup\n");
     }
 
     /* eslint-disable @stylistic/max-len */

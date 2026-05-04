@@ -1,10 +1,10 @@
 {
-  "name": "electron-reactive-event-cli",
+  "name": "reactive-event-cli",
   "version": "1.0.119",
-  "description": "The CLI for electron-reactive-event.",
+  "description": "The CLI for reactive-event.",
   "bin": {
-    "electron-reactive-event-cli": "./Distribution/Bin.js",
-    "electron-reactive-event-cli-setup": "./Distribution/Setup.Command.js",
+    "reactive-event-cli": "./Distribution/Bin.js",
+    "reactive-event-cli-setup": "./Distribution/Setup.Command.js",
     "reactive-cli": "./Distribution/Bin.js"
   },
   "files": [
@@ -20,12 +20,12 @@
     "react",
     "typescript"
   ],
-  "homepage": "https://electron-reactive-event.sorrell.sh",
+  "homepage": "https://reactive-event.sorrell.sh",
   "bugs": {
     "url": "https://github.com/GageSorrell/SorrellWm/issues"
   },
   "repository": {
-    "directory": "Package/ElectronReactiveEventCli",
+    "directory": "Package/ReactiveEventCli",
     "type": "git",
     "url": "git+https://github.com/GageSorrell/SorrellWm.git"
   },
@@ -44,7 +44,7 @@
   "scripts": {
     "build": "tsc -p ./tsconfig.json",
     "get-types": "npm run build && node ./Distribution/WriteTypesToClipboard.js",
-    "generate-schema": "npx typescript-json-schema ./tsconfig.JsonSchema.json CliConfigSchema --out ../ElectronReactiveEvent/Documentation/public/CliConfig.Schema.json"
+    "generate-schema": "npx typescript-json-schema ./tsconfig.JsonSchema.json CliConfigSchema --out ../ReactiveEvent/Documentation/public/CliConfig.Schema.json"
   },
   "dependencies": {
     "@listr2/prompt-adapter-enquirer": "^4.2.1",

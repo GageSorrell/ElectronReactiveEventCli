@@ -323,7 +323,7 @@ function DeclareEventsInner(Config: CliConfig): (() => Promise<string>)
             Header +
             "\n" +
             ImportStatements +
-            `\n\ndeclare module "electron-reactive-event/registrar"
+            `\n\ndeclare module "reactive-event/registrar"
 {
     interface Registrar
     {
@@ -353,7 +353,7 @@ export async function DeclareEvents(Path?: string): Promise<void>
     if (!(await HasConfig(Path)))
     {
         /* eslint-disable-next-line @stylistic/max-len */
-        console.log("\n💡 Tip: You can create a default config file by running\n\n    npm exec electron-reactive-event setup\n");
+        console.log("\n💡 Tip: You can create a default config file by running\n\n    npm exec reactive-event setup\n");
     }
 
     await Try(

@@ -22,7 +22,7 @@ import { resolve } from "path";
 async function GetDefaultWrittenConfig(): Promise<string>
 {
     const SchemaLine: string =
-        "$schema: \"https://electron-reactive-event.sorrell.sh/CliConfig.Schema.json\"";
+        "$schema: \"https://reactive-event.sorrell.sh/CliConfig.Schema.json\"";
 
     const Lines: Array<string> = JSON.stringify(await GetDefaultConfig(), null, 4)
         .split("\n")
@@ -34,7 +34,7 @@ async function GetDefaultWrittenConfig(): Promise<string>
     });
 
     /* eslint-disable-next-line @stylistic/max-len */
-    const CommentedContent: Array<string> = `//     // \`electron-reactive-event-cli\` can create modules for you that export the reactive
+    const CommentedContent: Array<string> = `//     // \`reactive-event-cli\` can create modules for you that export the reactive
 //     // IPC functions, scoped to your \`PackageKey\`.
 //     "IpcModulePath": {
 //         // The path of the module that calls \`getReactiveIpcMain\`, and exports its output.
@@ -218,7 +218,7 @@ export async function SetupCommand(): Promise<void>
 
                             (Context.PackageJson.scripts as Record<string, string>)["update-reactive"] =
                                 /* eslint-disable-next-line @stylistic/max-len */
-                                "electron-reactive-event-cli declare-events && electron-reactive-event-cli generate";
+                                "reactive-event-cli declare-events && reactive-event-cli generate";
 
                             const OutPackageJson: string = JSON.stringify(Context.PackageJson, null, 2);
                             await writeFile(

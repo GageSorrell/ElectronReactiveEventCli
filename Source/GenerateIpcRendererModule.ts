@@ -49,7 +49,7 @@ function Inner(
         const Header: string = GetHeader(ModulePath, "declare-events");
         const ImportPath: string = GetRelativeImportPath(Config.ScopedModulePath, ModulePath);
         const Contents: string = Header + `import type { PackageKey } from "${ ImportPath }";
-import { getReactiveIpcHooks } from "electron-reactive-event/scoped";
+import { getReactiveIpcHooks } from "reactive-event/scoped";
 
 const {
     useInvokeEvent: UseInvokeEvent,

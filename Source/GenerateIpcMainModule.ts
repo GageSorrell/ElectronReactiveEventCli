@@ -24,7 +24,7 @@ function Inner(
         const Header: string = GetHeader(ModulePath, "declare-events");
         const ImportPath: string = GetRelativeImportPath(Config.ScopedModulePath, ModulePath);
         const Contents: string = Header + `import type { PackageKey } from "${ ImportPath }";
-import { type IpcMainReactive, getReactiveIpcMain } from "electron-reactive-event/scoped";
+import { type IpcMainReactive, getReactiveIpcMain } from "reactive-event/scoped";
 
 export const ipcMain: IpcMainReactive<PackageKey> = getReactiveIpcMain<PackageKey>();
 `;

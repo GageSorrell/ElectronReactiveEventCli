@@ -6,4 +6,4 @@
  */
 
 /** The name of the CLI package. */
-export type PackageNameType = "electron-reactive-event-cli";
+export type PackageNameType = "reactive-event-cli";

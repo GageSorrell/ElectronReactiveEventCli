@@ -13,14 +13,14 @@ import type { CliConfig } from "./Config.Types";
 import type { IPackageJson } from "package-json-type";
 import type { PackageNameType } from "./Shared.Types";
 
-export const DefaultConfigFileName: string = "electron-reactive-event.config.jsonc";
+export const DefaultConfigFileName: string = "reactive-event.config.jsonc";
 
 /**
  * The name of the property that a dependent may specify in their `package.json#config`,
  * to specify a custom config file path.
  */
 export const PackageJsonConfigProperty: PackageNameType =
-    "electron-reactive-event-cli" as const;
+    "reactive-event-cli" as const;
 
 export async function HasConfig(Path?: string): Promise<boolean>
 {

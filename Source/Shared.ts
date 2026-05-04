@@ -16,7 +16,7 @@ import type { PackageNameType } from "./Shared.Types";
 /* eslint-disable jsdoc/require-jsdoc */
 
 /** {@inheritdoc PackageNameType} */
-export const PackageName: PackageNameType = "electron-reactive-event-cli" as const;
+export const PackageName: PackageNameType = "reactive-event-cli" as const;
 
 /* eslint-enable jsdoc/require-jsdoc */
 

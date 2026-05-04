@@ -7,7 +7,7 @@
 
 /**
  * The format of the JSON config file for using the CLI commands
- * offered by `electron-reactive-event`.
+ * offered by `reactive-event`.
  */
 export type CliConfig =
     {
@@ -19,7 +19,7 @@ export type CliConfig =
         AugmentationModulePath: string;
 
         /**
-         * `electron-reactive-event-cli` can create modules for you that export the reactive
+         * `reactive-event-cli` can create modules for you that export the reactive
          * IPC functions, scoped to your `PackageKey`.
          */
         IpcModulePath?:
@@ -32,14 +32,14 @@ export type CliConfig =
         };
 
         /**
-         * The unique identifier for your package.  This allows `electron-reactive-event`
+         * The unique identifier for your package.  This allows `reactive-event`
          * to be used by your package *and* any dependencies simultaneously.
          */
         PackageKey: string;
 
         /**
          * The path to the file that exports types scoped to your `PackageKey`.
-         * Every type exported by `electron-reactive-event/scoped` is imported here,
+         * Every type exported by `reactive-event/scoped` is imported here,
          * and a new type of the same name is defined, with your `PackageKey` filled in
          * for the `PackageKey` type parameter.  This path should be included in your
          * `tsconfig.json`.

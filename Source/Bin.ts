@@ -32,13 +32,13 @@ async function ShowHelp(): Promise<void>
 
     const Version: string = PackageJson.version;
     /* eslint-disable @stylistic/max-len */
-    console.log(`electron-reactive-event-cli v${ Version }.\nCopyright 2026 Gage Sorrell.\nReleased under the MIT license.\n
+    console.log(`reactive-event-cli v${ Version }.\nCopyright 2026 Gage Sorrell.\nReleased under the MIT license.\n
 Commands (Core):
 
     all:                   Performs everything below but setup.
     declare-events:        Generates a module that augments the Registrar with your event declarations.
     generate:              Runs all generate-* commands.
-    generate-scoped-types: Generates copies of the types exported by electron-reactive-event/scoped, but scoped to your PackageKey.
+    generate-scoped-types: Generates copies of the types exported by reactive-event/scoped, but scoped to your PackageKey.
     generate-types:        Alias for generate-scoped-types.
     generate-ipc main:     Generates a module that exports reactive IPC functions for main.
     generate-ipc renderer: Generates a module that exports reactive IPC functions for the renderer.,
